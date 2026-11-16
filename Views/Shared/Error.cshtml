@@ -1,0 +1,11 @@
+@model Clientes.Models.ErrorViewModel
+@{
+    ViewData["Title"] = "Error";
+}
+<h1 class="text-danger">Error</h1>
+<p>Ocurrió un problema al procesar la solicitud.</p>
+@if (Model.ShowRequestId)
+{
+    <p>Referencia: <code>@Model.RequestId</code></p>
+}
+<a asp-controller="Clientes" asp-action="Index" class="btn btn-primary">Volver</a>

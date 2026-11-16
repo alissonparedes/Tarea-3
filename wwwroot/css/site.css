@@ -1,0 +1,26 @@
+body {
+    background-color: #f0f2f5;
+    font-family: Arial, sans-serif;
+}
+h1, h2 {
+    color: #004080;
+}
+.card {
+    border-radius: 10px;
+}
+.table th {
+    white-space: nowrap;
+}
+.table td {
+    vertical-align: middle;
+}
+.form-control:focus {
+    border-color: #0066aa;
+    box-shadow: 0 0 0 .2rem rgba(0,102,170,.16);
+}
+.btn:hover {
+    opacity: .88;
+}
+@media (max-width: 600px) {
+    .table { font-size: 13px; }
+}

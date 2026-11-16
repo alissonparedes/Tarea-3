@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>@ViewData["Title"] - CRUD Clientes</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary shadow-sm mb-4">
+            <div class="container">
+                <a class="navbar-brand fw-bold" asp-controller="Clientes" asp-action="Index">CRUD Clientes</a>
+                <div class="navbar-nav">
+                    <a class="nav-link text-white" asp-controller="Clientes" asp-action="Index">Listado</a>
+                    <a class="nav-link text-white" asp-controller="Clientes" asp-action="Create">Nuevo cliente</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container mb-5">
+        <main role="main">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="text-center text-muted py-3 border-top small">
+        Tarea académica · CRUD de Clientes · ASP.NET Core MVC · C# · MySQL
+    </footer>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

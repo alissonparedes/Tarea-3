@@ -1,0 +1,21 @@
+@model Clientes.Models.ClienteModel
+@{
+    ViewData["Title"] = "Eliminar cliente";
+}
+
+<h1 class="h3 text-danger mb-3">Eliminar cliente</h1>
+<div class="alert alert-warning">¿Está seguro de eliminar este cliente? Esta acción no se puede deshacer.</div>
+<div class="card shadow-sm">
+    <div class="card-body">
+        <dl class="row">
+            <dt class="col-sm-3">Cédula</dt><dd class="col-sm-9">@Model.cedula</dd>
+            <dt class="col-sm-3">Nombre</dt><dd class="col-sm-9">@Model.nombre @Model.apellido</dd>
+            <dt class="col-sm-3">Correo</dt><dd class="col-sm-9">@Model.mail</dd>
+        </dl>
+        <form asp-action="Delete" asp-route-id="@Model.id" method="post">
+            <input type="hidden" asp-for="id" />
+            <button type="submit" class="btn btn-danger">Confirmar eliminación</button>
+            <a asp-action="Index" class="btn btn-outline-secondary">Cancelar</a>
+        </form>
+    </div>
+</div>

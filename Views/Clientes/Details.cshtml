@@ -1,0 +1,34 @@
+@model Clientes.Models.ClienteModel
+@{
+    ViewData["Title"] = "Detalle de cliente";
+}
+
+<h1 class="h3 text-primary mb-3">Detalle de cliente #@Model.id</h1>
+<div class="card shadow-sm">
+    <div class="card-body">
+        <dl class="row">
+        <dt class="col-sm-4">@Html.DisplayNameFor(model => model.cedula)</dt>
+        <dd class="col-sm-8">@Html.DisplayFor(model => model.cedula)</dd>
+        <dt class="col-sm-4">@Html.DisplayNameFor(model => model.nombre)</dt>
+        <dd class="col-sm-8">@Html.DisplayFor(model => model.nombre)</dd>
+        <dt class="col-sm-4">@Html.DisplayNameFor(model => model.apellido)</dt>
+        <dd class="col-sm-8">@Html.DisplayFor(model => model.apellido)</dd>
+        <dt class="col-sm-4">@Html.DisplayNameFor(model => model.direccion)</dt>
+        <dd class="col-sm-8">@Html.DisplayFor(model => model.direccion)</dd>
+        <dt class="col-sm-4">@Html.DisplayNameFor(model => model.telefono)</dt>
+        <dd class="col-sm-8">@Html.DisplayFor(model => model.telefono)</dd>
+        <dt class="col-sm-4">@Html.DisplayNameFor(model => model.mail)</dt>
+        <dd class="col-sm-8">@Html.DisplayFor(model => model.mail)</dd>
+        <dt class="col-sm-4">@Html.DisplayNameFor(model => model.ciudad)</dt>
+        <dd class="col-sm-8">@Html.DisplayFor(model => model.ciudad)</dd>
+        <dt class="col-sm-4">@Html.DisplayNameFor(model => model.provincia)</dt>
+        <dd class="col-sm-8">@Html.DisplayFor(model => model.provincia)</dd>
+        <dt class="col-sm-4">@Html.DisplayNameFor(model => model.fechaNacimiento)</dt>
+        <dd class="col-sm-8">@Model.fechaNacimiento.ToString("dd/MM/yyyy")</dd>
+        <dt class="col-sm-4">@Html.DisplayNameFor(model => model.activo)</dt>
+        <dd class="col-sm-8">@(Model.activo ? "Sí" : "No")</dd>
+        </dl>
+        <a asp-action="Edit" asp-route-id="@Model.id" class="btn btn-dark">Editar</a>
+        <a asp-action="Index" class="btn btn-outline-secondary">Volver</a>
+    </div>
+</div>
